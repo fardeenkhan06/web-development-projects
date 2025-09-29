@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>QuizMaster</span>
+            </div>
+            <div class="score-display">
+                <i class="fas fa-star"></i>
+                <span id="header-score">0</span>
+                <span class="score-separator">/</span>
+                <span id="total-questions">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div id="start-screen" class="screen">
+            <h1>Welcome to QuizMaster</h1>
+            <p>Test your knowledge with our challenging questions!</p>
+            <div class="category-select">
+                <h3>Select Category</h3>
+                <select id="category-select" aria-label="Select quiz category">
+                    <option value="general">General Knowledge</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="technology">Technology</option>
+                </select>
+            </div>
+            <button id="start-btn" class="btn primary-btn">Start Quiz</button>
+        </div>
+        <div id="quiz-container" class="screen hidden">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progress"></div>
+                    </div>
+                    <span id="question-number">Question 1/10</span>
+                </div>
+                <div class="timer-container">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer">30</span>s
+                </div>
+            </div>
+
+            <div id="question-container">
+                <div id="question">Question text</div>
+                <div id="answer-buttons" class="btn-container">
+                </div>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="next-btn" class="btn primary-btn">Next Question</button>
+            </div>
+        </div>
+        <div id="result-container" class="screen hidden">
+            <div class="result-content">
+                <i class="fas fa-trophy result-icon"></i>
+                <h2>Quiz Complete!</h2>
+                <div class="score-container">
+                    <h3>Your Score</h3>
+                    <div class="score-circle">
+                        <span id="score">0</span>
+                        <span class="score-max">/10</span>
+                    </div>
+                    <div class="score-message" id="score-message"></div>
+                </div>
+                <div class="result-details">
+                    <p>Correct Answers: <span id="correct-answers">0</span></p>
+                    <p>Time Taken: <span id="time-taken">0</span> seconds</p>
+                    <p>Accuracy: <span id="accuracy">0</span>%</p>
+                </div>
+                <div class="result-actions">
+                    <button id="restart-btn" class="btn primary-btn">Try Again</button>
+                    <button id="share-btn" class="btn secondary-btn">
+                        <i class="fas fa-share-alt"></i> Share Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About QuizMaster</h4>
+                <p>Test your knowledge with our interactive quiz platform.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 QuizMaster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
